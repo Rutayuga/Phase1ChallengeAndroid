@@ -9,24 +9,31 @@
     <TextView
         android:id="@+id/welcome_title"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="147dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="144dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:text="Welcome to ALC 4.0"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btn_about_alc"
+        android:id="@+id/about_btn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="76dp"
+        android:background="@android:color/holo_orange_dark"
         android:text="About ALC"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/welcome_title"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/welcome_title"
         app:layout_constraintTop_toBottomOf="@+id/welcome_title" />
 
@@ -34,9 +41,13 @@
         android:id="@+id/my_profile"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="36dp"
+        android:background="@android:color/holo_orange_dark"
         android:text="MY PROFILE"
-        app:layout_constraintEnd_toEndOf="@+id/btn_about_alc"
-        app:layout_constraintStart_toStartOf="@+id/btn_about_alc"
-        app:layout_constraintTop_toBottomOf="@+id/btn_about_alc" />
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/about_btn"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/about_btn"
+        app:layout_constraintTop_toBottomOf="@+id/about_btn" />
 </android.support.constraint.ConstraintLayout>

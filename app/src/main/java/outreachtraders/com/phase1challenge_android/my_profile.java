@@ -9,5 +9,6 @@ public class my_profile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_profile);
+        setTitle(R.string.my_prthile);
     }
 }
