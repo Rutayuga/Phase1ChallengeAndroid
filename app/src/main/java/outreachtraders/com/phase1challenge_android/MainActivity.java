@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Button about=findViewById(R.id.about_btn);
         Button profile=findViewById(R.id.my_profile);
+        final Button info=findViewById(R.id.weather_btn);
         about.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -29,6 +30,14 @@ profile.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
         Intent intent =new Intent(MainActivity.this, my_profile.class);
+        startActivity(intent);
+    }
+});
+
+info.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        Intent intent=new Intent(MainActivity.this, info.class);
         startActivity(intent);
     }
 });

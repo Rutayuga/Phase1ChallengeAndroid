@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "336147788215",
+    "firebase_url": "https://outlink-co-5adfb.firebaseio.com",
+    "project_id": "outlink-co-5adfb",
+    "storage_bucket": "outlink-co-5adfb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:336147788215:android:af174c3901eba7d4",
+        "android_client_info": {
+          "package_name": "outreachtraders.com.phase1challenge_android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "336147788215-psr6d6gh3uor1nm4314t5krb4oj5rho2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "outreachtraders.com.phase1challenge_android",
+            "certificate_hash": "762e9fc353a6a1a50126b2c3afcadbb6ef65a760"
+          }
+        },
+        {
+          "client_id": "336147788215-m54go9megr82l55fa1fuppap7hj445h4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAS5iam5L0o0Fk1gZQhxVIzunJZIhqUHA4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "336147788215-m54go9megr82l55fa1fuppap7hj445h4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
