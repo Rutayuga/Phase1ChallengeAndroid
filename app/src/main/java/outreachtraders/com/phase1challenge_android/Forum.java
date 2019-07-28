@@ -13,8 +13,11 @@ import android.widget.EditText;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class Forum extends AppCompatActivity {
 
@@ -42,6 +45,18 @@ public class Forum extends AppCompatActivity {
         firebaseDatabase =FirebaseDatabase.getInstance();
         databaseReference=firebaseDatabase.getReference("EDMT_FIREBASE");
 
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                displayComment();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
         btn_post.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,6 +65,13 @@ public class Forum extends AppCompatActivity {
         });
         displayComment();
     }
+
+@Override
+protected void onStop(){
+        if (adapter !=null)
+            adapter.stopListening();
+        super.onStop();
+}
 
     private void postCommet() {
         String title =edt_title.getText().toString();
