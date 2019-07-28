@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".info"></activity>
+        <activity android:name=".Forum"></activity>
+        <activity android:name=".info" />
         <activity
             android:name=".my_profile"
             android:parentActivityName=".MainActivity">

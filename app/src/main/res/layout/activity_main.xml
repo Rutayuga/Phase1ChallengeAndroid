@@ -8,8 +8,8 @@
 
     <TextView
         android:id="@+id/welcome_title"
-        android:layout_width="0dp"
-        android:layout_height="147dp"
+        android:layout_width="339dp"
+        android:layout_height="62dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="144dp"
@@ -55,12 +55,30 @@
         android:id="@+id/weather_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:layout_marginBottom="44dp"
         android:text="Weather"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/my_profile"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="@+id/my_profile" />
+        app:layout_constraintHorizontal_bias="0.199"
+        app:layout_constraintStart_toStartOf="@+id/my_profile"
+        app:layout_constraintTop_toBottomOf="@+id/my_profile"
+        app:layout_constraintVertical_bias="0.516" />
+
+    <Button
+        android:id="@+id/btn_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="44dp"
+        android:text="Chat"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.19"
+        app:layout_constraintStart_toEndOf="@+id/weather_btn"
+        app:layout_constraintTop_toBottomOf="@+id/my_profile" />
 </android.support.constraint.ConstraintLayout>
