@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Button about=findViewById(R.id.about_btn);
         Button profile=findViewById(R.id.my_profile);
+        final Button forum=findViewById(R.id.btn_chat);
         final Button info=findViewById(R.id.weather_btn);
         about.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,6 +39,14 @@ info.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
         Intent intent=new Intent(MainActivity.this, info.class);
+        startActivity(intent);
+    }
+});
+
+forum.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        Intent intent=new Intent(MainActivity.this, Forum.class);
         startActivity(intent);
     }
 });
