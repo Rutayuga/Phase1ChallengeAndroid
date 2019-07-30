@@ -71,6 +71,8 @@ public class Forum extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 postComment();
+                edt_content.setText("");
+                edt_title.setText("");
             }
         });
 
