@@ -52,6 +52,7 @@
         app:layout_constraintTop_toBottomOf="@+id/about_btn" />
 
     <Button
+        android:visibility="gone"
         android:id="@+id/weather_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -94,6 +95,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <Button
+                    android:visibility="gone"
                     android:id="@+id/button1"
                     android:layout_width="65dip"
                     android:layout_height="65dip"
@@ -127,9 +129,12 @@
                     android:layout_height="65dip"
                     android:layout_alignStart="@+id/relative_layout3"
                     android:layout_alignLeft="@+id/relative_layout3"
+                    android:layout_alignParentBottom="true"
                     android:layout_marginStart="50dp"
                     android:layout_marginLeft="50dp"
+                    android:layout_marginBottom="0dp"
                     android:background="@drawable/email_icon"
+                    android:visibility="gone"
                     tools:ignore="NotSibling" />
             </RelativeLayout>
             <TextView
@@ -156,6 +161,7 @@
                 android:layout_height="wrap_content">
 
                 <Button
+                    android:visibility="gone"
                     android:id="@+id/myButton4"
                     android:layout_width="wrap_content"
                     android:layout_height="65dip"
@@ -174,6 +180,7 @@
             </RelativeLayout>
 
             <TextView
+                android:visibility="gone"
                 android:id="@+id/badge_notification_4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
