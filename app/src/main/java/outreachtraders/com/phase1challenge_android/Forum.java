@@ -25,7 +25,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class Forum extends AppCompatActivity {
 
-    EditText edt_title, edt_content;
+    EditText full_name, phone, email, region, district, division, edt_title, edt_content;
     Button btn_post, btn_update, btn_delete;
     RecyclerView recyclerView;
 
@@ -43,6 +43,12 @@ public class Forum extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forum);
 
+        full_name=(EditText)findViewById(R.id.full_name);
+        phone=(EditText)findViewById(R.id.phone);
+        email=(EditText)findViewById(R.id.email);
+        region=(EditText)findViewById(R.id.region);
+        district=(EditText)findViewById(R.id.district);
+        division=(EditText)findViewById(R.id.division);
         edt_content=(EditText)findViewById(R.id.edt_content);
         edt_title=(EditText)findViewById(R.id.edt_title);
         btn_post=(Button)findViewById(R.id.btn_post);
@@ -71,8 +77,15 @@ public class Forum extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 postComment();
+                division.setText("");
+                district.setText("");
+                region.setText("");
+                email.setText("");
+                phone.setText("");
+                full_name.setText("");
                 edt_content.setText("");
                 edt_title.setText("");
+
             }
         });
 
@@ -81,7 +94,9 @@ public class Forum extends AppCompatActivity {
             public void onClick(View view) {
                 databaseReference
                         .child(selectedKey)
-                        .setValue(new Post(edt_title.getText().toString(),edt_content.getText().toString()))
+                        .setValue(new Post(full_name.getText().toString(),
+                                phone.getText().toString(), email.getText().toString(), region.getText().toString(), district.getText().toString(),
+                                division.getText().toString(), edt_title.getText().toString(),edt_content.getText().toString()))
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {
@@ -127,10 +142,16 @@ protected void onStop(){
 }
 
     private void postComment() {
+        String name=full_name.getText().toString();
+        String pnumber=phone.getText().toString();
+        String mail=email.getText().toString();
+        String reg=region.getText().toString();
+        String dist=district.getText().toString();
+        String div=division.getText().toString();
         String title =edt_title.getText().toString();
         String content=edt_content.getText().toString();
 
-        Post post=new Post(title,content);
+        Post post=new Post(name, pnumber, mail, reg, dist, div, title,content);
 
         databaseReference.push() //Use this method to create unique id for comment
                 .setValue(post);
@@ -149,6 +170,12 @@ protected void onStop(){
                 new FirebaseRecyclerAdapter<Post, MyRecycleViewHolder>(options) {
                     @Override
                     protected void onBindViewHolder(@NonNull MyRecycleViewHolder holder, int position, @NonNull final Post model) {
+                        holder.txt_division.setText(model.getTitle());
+                        holder.txt_district.setText(model.getTitle());
+                        holder.txt_region.setText(model.getTitle());
+                        holder.txt_email.setText(model.getTitle());
+                        holder.txt_phone.setText(model.getTitle());
+                        holder.txt_full_name.setText(model.getTitle());
                         holder.txt_title.setText(model.getTitle());
                         holder.txt_comment.setText(model.getContent());
 
